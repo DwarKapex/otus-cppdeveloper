@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../library/HelloWorld/include/HelloWorld/HelloWorld.h
+cstdio
+-
+
+/Users/vek/Practice/OTUS/cpp/homework/otus-cppdeveloper/apps/HelloWorld/src/main_HelloWorld.cpp
+HelloWorld/HelloWorld.h
+-
+iostream
+-
+

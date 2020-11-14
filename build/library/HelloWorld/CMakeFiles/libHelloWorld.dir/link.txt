@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/OSX12.0.xctoolchain/usr/bin/ar qc liblibHelloWorld.a CMakeFiles/libHelloWorld.dir/src/HelloWorld.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/OSX12.0.xctoolchain/usr/bin/ranlib liblibHelloWorld.a

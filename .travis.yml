@@ -1,0 +1,26 @@
+os: linux
+dist: xenial
+sudo: required
+language: cpp
+compiler: clang
+addons:
+  apt:   
+    packages:
+      - libboost-test-dev
+before_install:
+ - sudo apt-get update -qq 
+
+script:
+  - bash scripts/deploy.sh
+ 
+before_deploy:
+  - sed -i "s/__VERSION__/$TRAVIS_BUILD_NUMBER/g" bintray-spec.json
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    provider: bintray
+    file: bintray-spec.json
+    user: $BINTRAY_USER
+    key: $BINTRAY_API_KEY
+                            
