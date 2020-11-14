@@ -7,3 +7,5 @@ cmake --build . --target test_HelloWorld
 ctest test_HelloWorld
 # build and install app
 cmake --build . --target helloworld
+# generate deb package 
+cpack
