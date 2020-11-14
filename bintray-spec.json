@@ -1,9 +1,9 @@
 {
     "package": {
         "name": "homework",
-        "repo": "otus-cpp",
+        "repo": "otus-hw",
         "subject": "dwarkapex",
-        "vcs_url": "https://github.com/DwarKapex/otus-cpp.git"
+        "vcs_url": "https://github.com/DwarKapex/otus-cppdeveloper.git"
     },
     "version": {
         "name": "__VERSION__",
