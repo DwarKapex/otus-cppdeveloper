@@ -16,8 +16,6 @@ script:
   - bash scripts/deploy.sh
  
 before_deploy:
-  - ls -lah
-  - ls -lah app/
   - sed -i "s/__VERSION__/$TRAVIS_BUILD_NUMBER/g" bintray-spec.json
 
 deploy:
