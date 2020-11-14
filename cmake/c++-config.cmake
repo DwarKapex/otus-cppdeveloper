@@ -23,7 +23,7 @@ add_compile_options(
 
 # clang recomendations
 if (${CMAKE_CXX_COMPILER} MATCHES ".*clang.*")
-        add_cxx_family_compile_options(
+        add_compile_options(
             -Wbool-conversion
             -Wcomma
             -Wdeprecated-implementations
