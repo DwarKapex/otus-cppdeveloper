@@ -55,15 +55,13 @@ function(add_project_test)
 	add_test(${test_name} ${test_name})
 endfunction()
 
-function(add_and_install_project_app)
+function(add_and_install_project_app app_name)
 	set(options "")
     set(oneValueArgs "")
     set(multiValueArgs DEPEND)
 
     cmake_parse_arguments(add_project_app "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 
-	get_filename_component(app_name "${CMAKE_CURRENT_SOURCE_DIR}" NAME)
-	set(app_name app_${app_name})
 	glob_target_files(${app_name} 
 					TARGET_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
 
