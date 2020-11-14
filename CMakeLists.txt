@@ -1,5 +1,5 @@
-# Work with CMake version minimum 3.15
-cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
+# Work with CMake version minimum 3.12
+cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
 
 # set default travis-ci.org build if not defined one.
 # Use for local build only
