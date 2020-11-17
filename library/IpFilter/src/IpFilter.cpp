@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <string>
 #include <limits>
+#include <cassert>
 
 namespace IpFilter{
 
