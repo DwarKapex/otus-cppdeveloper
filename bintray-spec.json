@@ -1,0 +1,27 @@
+{
+    "package": {
+        "name": "otus-hw",
+        "repo": "otus-cpp",
+        "subject": "dwarkapex",
+        "vcs_url": "https://github.com/DwarKapex/otus-cppdeveloper.git"
+    },
+    "version": {
+        "name": "__VERSION__",
+        "desc": "otus_cpp __VERSION__"
+    },
+    "licenses": ["MIT"],
+    "desc": "Debian package built and deployed completely automatically",
+    "files": [
+        {
+            "includePattern": "./(.[^/]*(\\.deb)$)",
+            "uploadPattern": "$1",
+            "matrixParams": {
+                "deb_distribution": "xenial",
+                "deb_component": "main",
+                "deb_architecture": "amd64"
+            }
+        }
+    ],
+    "publish": true,
+    "override": false
+}

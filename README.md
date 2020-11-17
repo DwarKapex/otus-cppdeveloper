@@ -1,2 +1,2 @@
-# otus-cppdeveloper
-OTUS course "C++ Professional"
+OTUS c++ Developer
+
