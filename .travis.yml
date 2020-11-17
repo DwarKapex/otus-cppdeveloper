@@ -27,5 +27,4 @@ deploy:
     key: $BINTRAY_API_KEY
     on:
       all_branches: true
-      condition: $TRAVIS_BRANCH =~ hw*.
                             
