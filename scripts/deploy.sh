@@ -1,11 +1,11 @@
 cmake .
 # build lib
-cmake --build . --target lib_IpFilter
+cmake --build . --target lib_Allocator
 # build test for lib
-cmake --build . --target test_IpFilter
+cmake --build . --target test_Allocator
 # run test
-ctest test_IpFilter
+ctest test_Allocator
 # build and install app
-cmake --build . --target ip_filter
+cmake --build . --target allocator
 # generate deb package 
 cpack
