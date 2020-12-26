@@ -11,9 +11,11 @@ namespace Allocator {
 template <typename T, typename Allocator = std::allocator<T>>
 class List
 {
+public:
+    using value_type = typename std::allocator_traits<Allocator>::value_type;
 private:
     struct Node {
-        T data = T();
+        value_type data = value_type();
         Node *next = nullptr;
     };
 
@@ -41,7 +43,7 @@ public:
     auto end() -> iterator { return iterator(m_tail->next); }
     auto begin() const -> const iterator { return iterator(m_dummy_head->next); }
     auto end() const -> const iterator { return iterator(m_tail->next); }
-    void push_back(const T &t);
+    void push_back(const value_type &t);
     ~List();
 
 private:
@@ -61,7 +63,7 @@ List<T, Allocator>::List(): m_dummy_head() {
 }
 
 template <typename T, typename Allocator>
-void List<T, Allocator>::push_back(const T &t) {
+void List<T, Allocator>::push_back(const value_type &t) {
     Node *node = m_node_allocator.allocate(1);
     m_node_allocator.construct(node, Node{t, nullptr});
     m_tail->next = node;

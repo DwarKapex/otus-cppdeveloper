@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <new>
 #include <utility>
+#include <algorithm>
 
 namespace Allocator {
 
@@ -44,19 +45,7 @@ private:
 //--------------------------------------
 
 template<typename T, size_t N>
-Allocator<T, N>::Allocator(): max_allocatable_objects(N) {
-    m_area = static_cast<T*> (::operator new (N*sizeof(T)));
-    if (nullptr == m_area) {
-        throw std::bad_alloc();
-    }
-    m_free_chunks = new bool[max_allocatable_objects];
-    if (m_free_chunks == nullptr) {
-        throw std::bad_alloc();
-    }
-    for (size_t i = 0; i < max_allocatable_objects; ++i) {
-        m_free_chunks[i] = true;
-    }
-}
+Allocator<T, N>::Allocator(): max_allocatable_objects(N) {}
     
 template<typename T, size_t N>    
 template<typename U>
@@ -66,6 +55,17 @@ struct Allocator<T, N>::rebind{
 
 template<typename T, size_t N>
 T* Allocator<T, N>::allocate(std::size_t n) { 
+    if (nullptr == m_area) {
+        m_area = static_cast<T*> (::operator new (max_allocatable_objects*sizeof(T)));
+        if (nullptr == m_area) {
+            throw std::bad_alloc();
+        }
+        m_free_chunks = new bool[max_allocatable_objects];
+        if (m_free_chunks == nullptr) {
+            throw std::bad_alloc();
+        }
+        std::fill_n(m_free_chunks, max_allocatable_objects, true);
+    }
     if (n > max_allocatable_objects) 
         throw std::bad_alloc{};
     auto p = FindAvailableChunk(n); 
@@ -98,6 +98,7 @@ void Allocator<T, N>::destroy(T *p) {
 template<typename T, size_t N>
 Allocator<T, N>::~Allocator() {
     ::operator delete(m_area);
+    delete [] m_free_chunks;
 }
 
 template<typename T, size_t N>
