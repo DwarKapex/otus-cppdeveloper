@@ -1,11 +1,11 @@
 cmake .
 # build lib
-cmake --build . --target libIpFilter
+cmake --build . --target lib_struct
 # build test for lib
-cmake --build . --target test_IpFilter
+cmake --build . --target test_struct
 # run test
-ctest test_IpFilter
+ctest test_struct
 # build and install app
-cmake --build . --target ip_filter
+cmake --build . --target struct
 # generate deb package 
 cpack
