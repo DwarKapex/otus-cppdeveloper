@@ -15,7 +15,7 @@ option(ENABLE_TESTING "Build small (unit) tests" ON)
 
 # ================ Project ========================
 # Project name and a few useful settings
-project(ip_filter
+project(struct
 	VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER}
 	DESCRIPTION "OTUS c++ homeworks: ip_filter"
 	LANGUAGES CXX
