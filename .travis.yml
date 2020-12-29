@@ -1,7 +1,7 @@
 language: cpp
 dist: focal
 sudo: required
-# compiler: clang
+compiler: clang
 
 addons:
   apt:   
