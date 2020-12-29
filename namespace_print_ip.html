@@ -99,10 +99,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a37b472ad052d63455c1b025224bdc5f8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="namespace_print_ip.html#aed5bf24733e2cc99d28572b994380d4a">is_container_v</a>&lt; T &gt;, std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_print_ip.html#a37b472ad052d63455c1b025224bdc5f8">print_ip_impl</a> (const T &amp;value)</td></tr>
 <tr class="memdesc:a37b472ad052d63455c1b025224bdc5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert input value (of STL containers (std::vector, std::list for now)) to string.  <a href="namespace_print_ip.html#a37b472ad052d63455c1b025224bdc5f8">More...</a><br /></td></tr>
 <tr class="separator:a37b472ad052d63455c1b025224bdc5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a158b98060c30047c1b38fa60a6cccc21"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Tail&gt; </td></tr>
-<tr class="memitem:a158b98060c30047c1b38fa60a6cccc21"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::conjunction&lt; std::is_same&lt; T, Tail &gt;... &gt;::value, std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_print_ip.html#a158b98060c30047c1b38fa60a6cccc21">print_ip_impl</a> (const std::tuple&lt; T, Tail... &gt; &amp;ip)</td></tr>
-<tr class="memdesc:a158b98060c30047c1b38fa60a6cccc21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert input value (of std::tuple) to string.  <a href="namespace_print_ip.html#a158b98060c30047c1b38fa60a6cccc21">More...</a><br /></td></tr>
-<tr class="separator:a158b98060c30047c1b38fa60a6cccc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a1b2199082981bbdccdbc53505c649"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Tail&gt; </td></tr>
+<tr class="memitem:a00a1b2199082981bbdccdbc53505c649"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::conjunction_v&lt; std::is_same&lt; T, Tail &gt;... &gt;, std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_print_ip.html#a00a1b2199082981bbdccdbc53505c649">print_ip_impl</a> (const std::tuple&lt; T, Tail... &gt; &amp;ip)</td></tr>
+<tr class="memdesc:a00a1b2199082981bbdccdbc53505c649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert input value (of std::tuple) to string.  <a href="namespace_print_ip.html#a00a1b2199082981bbdccdbc53505c649">More...</a><br /></td></tr>
+<tr class="separator:a00a1b2199082981bbdccdbc53505c649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c8c119d299065ae9f515315d51a78df"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4c8c119d299065ae9f515315d51a78df"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_print_ip.html#a4c8c119d299065ae9f515315d51a78df">print_ip</a> (const T &amp;value)</td></tr>
 <tr class="memdesc:a4c8c119d299065ae9f515315d51a78df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorator for for to-string converters.  <a href="namespace_print_ip.html#a4c8c119d299065ae9f515315d51a78df">More...</a><br /></td></tr>
@@ -150,7 +150,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                                  {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_print_ip.html#a158b98060c30047c1b38fa60a6cccc21">print_ip_impl</a>(value);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_print_ip.html#a00a1b2199082981bbdccdbc53505c649">print_ip_impl</a>(value);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -164,8 +164,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a158b98060c30047c1b38fa60a6cccc21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a158b98060c30047c1b38fa60a6cccc21">&#9670;&nbsp;</a></span>print_ip_impl() <span class="overload">[1/4]</span></h2>
+<a id="a00a1b2199082981bbdccdbc53505c649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a1b2199082981bbdccdbc53505c649">&#9670;&nbsp;</a></span>print_ip_impl() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +173,7 @@ Here is the call graph for this function:</div>
 template&lt;typename T , typename... Tail&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;std::conjunction&lt;std::is_same&lt;T, Tail&gt;...&gt;::value, std::string&gt; PrintIp::print_ip_impl </td>
+          <td class="memname">std::enable_if_t&lt;std::conjunction_v&lt;std::is_same&lt;T, Tail&gt;...&gt;, std::string&gt; PrintIp::print_ip_impl </td>
           <td>(</td>
           <td class="paramtype">const std::tuple&lt; T, Tail... &gt; &amp;&#160;</td>
           <td class="paramname"><em>ip</em></td><td>)</td>
@@ -196,8 +196,8 @@ template&lt;typename T , typename... Tail&gt; </div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                                                                                                     {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  constexpr <span class="keywordtype">int</span> num_args_tuple = std::tuple_size&lt;std::tuple&lt;T, Tail...&gt;&gt;::value;</div>
+<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                                                                                                  {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  constexpr <span class="keywordtype">int</span> num_args_tuple = std::tuple_size_v&lt;std::tuple&lt;T, Tail...&gt;&gt;;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">return</span> build_tuple_string&lt;std::tuple&lt;T, Tail...&gt;, 0, num_args_tuple - 1&gt;::get_tuple_value(ip);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 </div><!-- fragment -->
@@ -340,10 +340,10 @@ template&lt;typename U &gt; </div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="anamespace_print_ip_html_a158b98060c30047c1b38fa60a6cccc21"><div class="ttname"><a href="namespace_print_ip.html#a158b98060c30047c1b38fa60a6cccc21">PrintIp::print_ip_impl</a></div><div class="ttdeci">std::enable_if_t&lt; std::conjunction&lt; std::is_same&lt; T, Tail &gt;... &gt;::value, std::string &gt; print_ip_impl(const std::tuple&lt; T, Tail... &gt; &amp;ip)</div><div class="ttdoc">Convert input value (of std::tuple) to string.</div><div class="ttdef"><b>Definition:</b> PrintIp.h:114</div></div>
+<div class="ttc" id="anamespace_print_ip_html_a00a1b2199082981bbdccdbc53505c649"><div class="ttname"><a href="namespace_print_ip.html#a00a1b2199082981bbdccdbc53505c649">PrintIp::print_ip_impl</a></div><div class="ttdeci">std::enable_if_t&lt; std::conjunction_v&lt; std::is_same&lt; T, Tail &gt;... &gt;, std::string &gt; print_ip_impl(const std::tuple&lt; T, Tail... &gt; &amp;ip)</div><div class="ttdoc">Convert input value (of std::tuple) to string.</div><div class="ttdef"><b>Definition:</b> PrintIp.h:114</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 29 2020 06:53:24 for PrintIP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 29 2020 06:57:16 for PrintIP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -161,8 +161,8 @@ $(function() {
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Tail&gt;</div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="namespace_print_ip.html#a158b98060c30047c1b38fa60a6cccc21">  114</a></span>&#160;std::enable_if_t&lt;std::conjunction&lt;std::is_same&lt;T, Tail&gt;...&gt;::value, std::string&gt; <a class="code" href="namespace_print_ip.html#a1b17aaf96e5c24ce734589fb413e61ec">print_ip_impl</a>(<span class="keyword">const</span> std::tuple&lt;T, Tail...&gt;&amp; ip) {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  constexpr <span class="keywordtype">int</span> num_args_tuple = std::tuple_size&lt;std::tuple&lt;T, Tail...&gt;&gt;::value;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="namespace_print_ip.html#a00a1b2199082981bbdccdbc53505c649">  114</a></span>&#160;std::enable_if_t&lt;std::conjunction_v&lt;std::is_same&lt;T, Tail&gt;...&gt;, std::string&gt; <a class="code" href="namespace_print_ip.html#a1b17aaf96e5c24ce734589fb413e61ec">print_ip_impl</a>(<span class="keyword">const</span> std::tuple&lt;T, Tail...&gt;&amp; ip) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  constexpr <span class="keywordtype">int</span> num_args_tuple = std::tuple_size_v&lt;std::tuple&lt;T, Tail...&gt;&gt;;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="struct_print_ip_1_1build__tuple__string.html">build_tuple_string</a>&lt;std::tuple&lt;T, Tail...&gt;, 0, num_args_tuple - 1&gt;::get_tuple_value(ip);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
@@ -183,7 +183,7 @@ $(function() {
 <div class="ttc" id="astruct_print_ip_1_1build__tuple__string_html"><div class="ttname"><a href="struct_print_ip_1_1build__tuple__string.html">PrintIp::build_tuple_string</a></div><div class="ttdef"><b>Definition:</b> PrintIp.h:96</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 29 2020 06:53:24 for PrintIP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 29 2020 06:57:16 for PrintIP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
