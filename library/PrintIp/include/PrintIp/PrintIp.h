@@ -27,7 +27,7 @@ std::enable_if_t<std::is_integral_v<T>, std::string> print_ip_impl(const T& valu
 
 /*
 
-use std::is_same_t<> for simplicity
+use std::is_same_v<> for simplicity
 
 // template<typename T>
 // struct is_string : std::false_type {};
@@ -44,7 +44,7 @@ use std::is_same_t<> for simplicity
   * \param[out] string with result
 */
 template<typename T>
-std::enable_if_t<std::is_same_v<std::decay_t<T>, std::string>, std::string> 
+std::enable_if_t<std::is_same<std::decay_t<T>, std::string>::value, std::string> 
     print_ip_impl(const T& value) {
     return value;
 }
