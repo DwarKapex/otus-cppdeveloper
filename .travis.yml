@@ -12,6 +12,9 @@ addons:
 before_install:
  - sudo apt-get update -qq 
 
+install:
+ - sudo apt-get install doxygen graphviz -y
+
 script:
   - bash scripts/deploy.sh
  
@@ -19,6 +22,13 @@ before_deploy:
   - sed -i "s/__VERSION__/$TRAVIS_BUILD_NUMBER/g" bintray-spec.json
 
 deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    keep-history: true
+    local-dir: docs/html
+    on:
+      all_branches: true
   - provider: script
     skip_cleanup: true
     provider: bintray
