@@ -91,10 +91,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a1b17aaf96e5c24ce734589fb413e61ec"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral&lt; T &gt;::value, std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_print_ip.html#a1b17aaf96e5c24ce734589fb413e61ec">print_ip_impl</a> (const T &amp;value)</td></tr>
 <tr class="memdesc:a1b17aaf96e5c24ce734589fb413e61ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some bulshit to teset doxygen.  <a href="namespace_print_ip.html#a1b17aaf96e5c24ce734589fb413e61ec">More...</a><br /></td></tr>
 <tr class="separator:a1b17aaf96e5c24ce734589fb413e61ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb9c4fc19a5d22afdd73cb56c8605d7b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:abb9c4fc19a5d22afdd73cb56c8605d7b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same&lt; std::decay_t&lt; T &gt;, std::string &gt;::value, std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_print_ip.html#abb9c4fc19a5d22afdd73cb56c8605d7b">print_ip_impl</a> (const T &amp;value)</td></tr>
-<tr class="memdesc:abb9c4fc19a5d22afdd73cb56c8605d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert input value (of std::string) to string.  <a href="namespace_print_ip.html#abb9c4fc19a5d22afdd73cb56c8605d7b">More...</a><br /></td></tr>
-<tr class="separator:abb9c4fc19a5d22afdd73cb56c8605d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68179d9d3b03e4605e3cbd98639b2737"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a68179d9d3b03e4605e3cbd98639b2737"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; std::decay_t&lt; T &gt;, std::string &gt;, std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_print_ip.html#a68179d9d3b03e4605e3cbd98639b2737">print_ip_impl</a> (const T &amp;value)</td></tr>
+<tr class="memdesc:a68179d9d3b03e4605e3cbd98639b2737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert input value (of std::string) to string.  <a href="namespace_print_ip.html#a68179d9d3b03e4605e3cbd98639b2737">More...</a><br /></td></tr>
+<tr class="separator:a68179d9d3b03e4605e3cbd98639b2737"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37b472ad052d63455c1b025224bdc5f8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a37b472ad052d63455c1b025224bdc5f8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="namespace_print_ip.html#aed5bf24733e2cc99d28572b994380d4a">is_container_v</a>&lt; T &gt;, std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_print_ip.html#a37b472ad052d63455c1b025224bdc5f8">print_ip_impl</a> (const T &amp;value)</td></tr>
 <tr class="memdesc:a37b472ad052d63455c1b025224bdc5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert input value (of STL containers (std::vector, std::list for now)) to string.  <a href="namespace_print_ip.html#a37b472ad052d63455c1b025224bdc5f8">More...</a><br /></td></tr>
@@ -234,8 +234,8 @@ template&lt;typename T &gt; </div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="abb9c4fc19a5d22afdd73cb56c8605d7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb9c4fc19a5d22afdd73cb56c8605d7b">&#9670;&nbsp;</a></span>print_ip_impl() <span class="overload">[3/4]</span></h2>
+<a id="a68179d9d3b03e4605e3cbd98639b2737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68179d9d3b03e4605e3cbd98639b2737">&#9670;&nbsp;</a></span>print_ip_impl() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +243,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;std::is_same&lt;std::decay_t&lt;T&gt;, std::string&gt;::value, std::string&gt; PrintIp::print_ip_impl </td>
+          <td class="memname">std::enable_if_t&lt;std::is_same_v&lt;std::decay_t&lt;T&gt;, std::string&gt;, std::string&gt; PrintIp::print_ip_impl </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -343,7 +343,7 @@ template&lt;typename U &gt; </div>
 <div class="ttc" id="anamespace_print_ip_html_a00a1b2199082981bbdccdbc53505c649"><div class="ttname"><a href="namespace_print_ip.html#a00a1b2199082981bbdccdbc53505c649">PrintIp::print_ip_impl</a></div><div class="ttdeci">std::enable_if_t&lt; std::conjunction_v&lt; std::is_same&lt; T, Tail &gt;... &gt;, std::string &gt; print_ip_impl(const std::tuple&lt; T, Tail... &gt; &amp;ip)</div><div class="ttdoc">Convert input value (of std::tuple) to string.</div><div class="ttdef"><b>Definition:</b> PrintIp.h:114</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 29 2020 06:57:16 for PrintIP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 29 2020 07:01:31 for PrintIP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
