@@ -111,8 +111,8 @@ struct build_tuple_string {
   * \param[out] string with result
 */
 template <typename T, typename... Tail>
-std::enable_if_t<std::conjunction<std::is_same<T, Tail>...>::value, std::string> print_ip_impl(const std::tuple<T, Tail...>& ip) {
-  constexpr int num_args_tuple = std::tuple_size<std::tuple<T, Tail...>>::value;
+std::enable_if_t<std::conjunction_v<std::is_same<T, Tail>...>, std::string> print_ip_impl(const std::tuple<T, Tail...>& ip) {
+  constexpr int num_args_tuple = std::tuple_size_v<std::tuple<T, Tail...>>;
   return build_tuple_string<std::tuple<T, Tail...>, 0, num_args_tuple - 1>::get_tuple_value(ip);
 }
 
