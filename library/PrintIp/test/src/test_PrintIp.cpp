@@ -62,3 +62,12 @@ BOOST_AUTO_TEST_CASE(print_ip_tuple_test) {
     std::string expected_value{"1.2.4.8"};
   BOOST_CHECK_MESSAGE(print_ip(ip_tuple) == expected_value, "tuple{1, 2, 4, 8}");
 }
+
+BOOST_AUTO_TEST_CASE(print_ip_string) {
+  using namespace std::string_literals;
+  std::string ip_string("1.2.3.4");
+  BOOST_CHECK_MESSAGE(print_ip(ip_string) == "1.2.3.4", "string{1.2.3.4}");
+
+  BOOST_CHECK_MESSAGE(print_ip("1.2.3.4.5.6"s) == "1.2.3.4.5.6", "string{1.2.3.4.5.6}");
+}
+
