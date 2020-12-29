@@ -15,7 +15,7 @@ namespace PrintIp {
 
 /// Some bulshit to teset doxygen
 template<typename T>
-std::enable_if_t<std::is_integral_v<T>, std::string> print_ip_impl(const T& value) {
+std::enable_if_t<std::is_integral<T>::value, std::string> print_ip_impl(const T& value) {
     size_t type_size = sizeof(T);
     std::string result;
     for (size_t i = type_size; i > 0 ; --i) {
@@ -111,7 +111,7 @@ struct build_tuple_string {
   * \param[out] string with result
 */
 template <typename T, typename... Tail>
-std::enable_if_t<std::conjunction_v<std::is_same<T, Tail>...>, std::string> print_ip_impl(const std::tuple<T, Tail...>& ip) {
+std::enable_if_t<std::conjunction<std::is_same<T, Tail>...>::value, std::string> print_ip_impl(const std::tuple<T, Tail...>& ip) {
   constexpr int num_args_tuple = std::tuple_size<std::tuple<T, Tail...>>::value;
   return build_tuple_string<std::tuple<T, Tail...>, 0, num_args_tuple - 1>::get_tuple_value(ip);
 }
