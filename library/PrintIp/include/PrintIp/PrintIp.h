@@ -44,7 +44,7 @@ use std::is_same_v<> for simplicity
   * \param[out] string with result
 */
 template<typename T>
-std::enable_if_t<std::is_same<std::decay_t<T>, std::string>::value, std::string> 
+std::enable_if_t<std::is_same_v<std::decay_t<T>, std::string>, std::string> 
     print_ip_impl(const T& value) {
     return value;
 }
