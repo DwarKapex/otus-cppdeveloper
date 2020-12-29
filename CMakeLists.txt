@@ -12,6 +12,8 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
 # build options
 option(ENABLE_TESTING "Build small (unit) tests" ON)
+# generate docs
+option(ENABLE_DOXYGEN "Build documentation" OFF)
 
 # ================ Project ========================
 # Project name and a few useful settings
@@ -40,3 +42,7 @@ add_subdirectory(library)
 
 # main apps are here
 add_subdirectory(apps)
+
+if (ENABLE_DOXYGEN)
+    include(doxygen/doxygen)
+endif()

@@ -1,1 +1,1 @@
-add_subdirectory(PrinIp)
+add_subdirectory(PrintIp)

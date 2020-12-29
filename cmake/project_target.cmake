@@ -1,6 +1,7 @@
 function(add_project_library)
 	get_filename_component(lib_name "${CMAKE_CURRENT_SOURCE_DIR}" NAME)
 	set(lib_name lib_${lib_name})
+
 	glob_target_files(${lib_name} 
 					  TARGET_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -78,7 +79,7 @@ function(add_and_install_project_app app_name)
 
 	set(app_lib_dependency "")
 	foreach(link_lib ${add_project_app_DEPEND})
-		LIST(APPEND app_lib_dependency lib_${link_lib})
+		LIST(APPEND app_lib_dependency ${link_lib})
 	endforeach()
 	
 	target_link_libraries(${app_name}
@@ -106,5 +107,4 @@ function(add_and_install_project_app app_name)
 	set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
 	set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
 	include(CPack)
-
 endfunction()
