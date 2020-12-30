@@ -39,8 +39,31 @@ class Matrix
          * \tparam ProxyDimention 
          */
         template<size_t ProxyDimention>
-        class Proxy;
+        class Proxy {
+            public:
+                Proxy(MatrixType* matrix, KeyType key)
+                        : matrix_(matrix),
+                            const_matrix_(nullptr),
+                            key_(key) {}
+            
+                Proxy(const MatrixType* matrix, KeyType key)
+                        : matrix_(nullptr),
+                            const_matrix_(matrix),
+                            key_(key) {}
 
+                auto operator[](const size_t idx) {
+                    key_[MainDimension - ProxyDimention] = idx;
+                    if (matrix_)
+                        return Proxy<ProxyDimention - 1>{matrix_, key_};
+                    else
+                        return Proxy<ProxyDimention - 1>{const_matrix_, key_};
+                }
+            
+            private:
+                MatrixType* matrix_;
+                const MatrixType* const_matrix_;
+                KeyType key_;
+        };
 
          /// \brief Zero-dimention proxy to contain actual value of the element
         template<>
@@ -49,12 +72,12 @@ class Matrix
                 Proxy(MatrixType* matrix, KeyType key)
                         : matrix_(matrix),
                           const_matrix_(nullptr),
-                          key_(key) {};
+                          key_(key) {}
 
                 Proxy(const MatrixType* matrix, KeyType key)
                         : matrix_(nullptr),
                           const_matrix_(matrix),
-                          key_(key) {};
+                          key_(key) {}
 
 
                 operator ValueType() const {
@@ -113,65 +136,24 @@ class Matrix
     private:
         DataType data_;
         
-        auto get_value(const KeyType& key) const -> const ValueType;
-        auto set_value(const KeyType& key, const ValueType& value) -> ValueType;
-
-};
-
-//----------------------------------
-#pragma mark Matrix definition
-//----------------------------------
-
-template<typename ValueType, ValueType DefaultValue, size_t MainDimension>
-template<size_t ProxyDimention>
-class Matrix<ValueType, DefaultValue, MainDimension>::Proxy {
-    public:
-        Proxy(MatrixType* matrix, KeyType key)
-                : matrix_(matrix),
-                    const_matrix_(nullptr),
-                    key_(key) {};
-    
-        Proxy(const MatrixType* matrix, KeyType key)
-                : matrix_(nullptr),
-                    const_matrix_(matrix),
-                    key_(key) {};
-
-        auto operator[](const size_t idx) {
-            key_[MainDimension - ProxyDimention] = idx;
-            if (matrix_)
-                return Proxy<ProxyDimention - 1>{matrix_, key_};
+        auto get_value(const KeyType& key) const -> const ValueType{
+            auto it = data_.find(key);
+            if (it == data_.end()) {
+                return DefaultValue;
+            }
+            else {
+                return it->second;
+            }
+        }
+        auto set_value(const KeyType& key, const ValueType& value) -> ValueType {
+            if (value == DefaultValue){
+                data_.erase(key);
+            }
             else
-                return Proxy<ProxyDimention - 1>{const_matrix_, key_};
-        };
-    
-    private:
-        MatrixType* matrix_;
-        const MatrixType* const_matrix_;
-        KeyType key_;
+                data_[key] = value;
+            return value;
+        }
+
 };
-
-template<typename ValueType, ValueType DefaultValue, size_t MainDimension>
-auto Matrix<ValueType, DefaultValue, MainDimension>::get_value(const KeyType& key) const 
-        -> const ValueType {
-    auto it = data_.find(key);
-    if (it == data_.end()) {
-        return DefaultValue;
-    }
-    else {
-        return it->second;
-    }
-}
-
-template<typename ValueType, ValueType DefaultValue, size_t MainDimension>
-auto Matrix<ValueType, DefaultValue, MainDimension>::set_value(const KeyType& key, const ValueType& value) 
-        -> ValueType {
-    if (value == DefaultValue){
-        data_.erase(key);
-    }
-    else
-        data_[key] = value;
-    return value;
-}
-
 
 } // namespace Matrix
