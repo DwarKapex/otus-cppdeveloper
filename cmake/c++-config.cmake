@@ -18,7 +18,6 @@ add_compile_options(
         -Wsign-promo
         -Wuninitialized
         -Wunreachable-code
-        # -Wbool-conversion
 )
 
 # clang recomendations
@@ -37,8 +36,8 @@ if (${CMAKE_CXX_COMPILER} MATCHES ".*clang.*")
             -Wnon-literal-null-conversion
             -Wrange-loop-analysis
             -Wstrict-prototypes
-        #   -Wundef
+            -Wundef
             -Wunreachable-code
-            -Wweak-vtables
+        #     -Wweak-vtables
         )
 endif()
