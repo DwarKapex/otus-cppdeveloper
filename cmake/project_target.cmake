@@ -26,6 +26,9 @@ function(add_project_library)
 endfunction()
 
 function(add_project_test)
+	if (NOT ENABLE_TESTING)
+		return()
+	endif()
 	# Generate default test
 	get_filename_component(test_dir "${CMAKE_CURRENT_SOURCE_DIR}" PATH)
 	get_filename_component(target_name "${test_dir}" NAME)
@@ -42,17 +45,29 @@ function(add_project_test)
 		${${test_name}_SOURCE}
 	)
 	
-	set_target_properties(${test_name} PROPERTIES
-		COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
-		INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
-		CXX_STANDARD 17
-		CXX_STANDARD_REQUIRED ON
-	)
+	if (ENABLE_BOOST_TEST)
+		set_target_properties(${test_name} PROPERTIES
+			COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
+			INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
+			CXX_STANDARD 17
+			CXX_STANDARD_REQUIRED ON
+		)
 	
-	target_link_libraries(${test_name} 
-		lib_${target_name}
-		${Boost_LIBRARIES}
-	)
+		target_link_libraries(${test_name} 
+			lib_${target_name}
+			${Boost_LIBRARIES}
+		)
+	elseif(ENABLE_GTEST)
+		set_target_properties(${test_name} PROPERTIES
+			CXX_STANDARD 17
+			CXX_STANDARD_REQUIRED ON
+		)
+
+		target_link_libraries(${test_name}
+			lib_${target_name}
+    		gtest
+		)
+	endif()
 
 	add_test(${test_name} ${test_name})
 endfunction()
@@ -78,9 +93,11 @@ function(add_and_install_project_app app_name)
 
 	set(app_lib_dependency "")
 	foreach(link_lib ${add_project_app_DEPEND})
-		LIST(APPEND app_lib_dependency lib_${link_lib})
+		LIST(APPEND app_lib_dependency ${link_lib})
 	endforeach()
 	
+	message("app_lib_dependency = ${app_lib_dependency}")
+
 	target_link_libraries(${app_name}
 		${app_lib_dependency}	
 	)	
