@@ -71,7 +71,7 @@ TEST(Matix, TwoDimentionalMatrix) {
     EXPECT_EQ(m.size(), 0); // expect still empty matrix
     
     m[100][100] = 314;
-    EXPECT_EQ(m[100][100], 12);
+    EXPECT_EQ(m[100][100], 314);
     EXPECT_EQ(m.size(), 1);
     
     std::string expected = "[ 100 100 ] : 314\n";

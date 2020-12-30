@@ -41,6 +41,7 @@ class Matrix
         template<size_t ProxyDimention>
         class Proxy;
 
+
          /// \brief Zero-dimention proxy to contain actual value of the element
         template<>
         class Proxy<0> {
