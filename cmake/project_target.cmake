@@ -65,7 +65,7 @@ function(add_project_test)
 
 		target_link_libraries(${test_name}
 			lib_${target_name}
-    		gtest
+    		gtest gtest_main
 		)
 	endif()
 
