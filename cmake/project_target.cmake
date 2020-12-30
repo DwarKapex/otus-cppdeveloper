@@ -96,8 +96,6 @@ function(add_and_install_project_app app_name)
 		LIST(APPEND app_lib_dependency ${link_lib})
 	endforeach()
 	
-	message("app_lib_dependency = ${app_lib_dependency}")
-
 	target_link_libraries(${app_name}
 		${app_lib_dependency}	
 	)	
