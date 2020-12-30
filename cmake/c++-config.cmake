@@ -18,7 +18,7 @@ add_compile_options(
         -Wsign-promo
         -Wuninitialized
         -Wunreachable-code
-        -Wbool-conversion
+        # -Wbool-conversion
 )
 
 # clang recomendations
