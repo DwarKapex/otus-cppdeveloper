@@ -1,6 +1,5 @@
 /**
  * \brief main library header for Matrix
- *  TODO: Multidimentional sparced infinite matrix with default given value
  *  \code
  *  Matrix<int, -2, 5> m; // create 5D matrix of int with default value -2;
  *  \endcode
@@ -22,7 +21,7 @@
 namespace Matrix {
 
 //----------------------------------
-#pragma mark Matrix declaration
+#pragma mark Matrix Implementation
 //----------------------------------
 template<typename ValueType, ValueType DefaultValue, size_t MainDimension = 2>
 class Matrix
@@ -34,7 +33,7 @@ class Matrix
     public:
 
         /**
-         * \brief Use pattern Proxy to get access to element
+         * \brief Use pattern `Proxy` to get access to element
          * 
          * \tparam ProxyDimention 
          */
