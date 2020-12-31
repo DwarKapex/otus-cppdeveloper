@@ -63,8 +63,9 @@ function(add_project_test)
 			CXX_STANDARD_REQUIRED ON
 		)
 
-		target_link_libraries(${test_name} PRIVATE
-    		gtest
+		target_link_libraries(${test_name}
+			lib_${target_name}
+    		gtest gtest_main
 		)
 	endif()
 
@@ -92,7 +93,7 @@ function(add_and_install_project_app app_name)
 
 	set(app_lib_dependency "")
 	foreach(link_lib ${add_project_app_DEPEND})
-		LIST(APPEND app_lib_dependency lib_${link_lib})
+		LIST(APPEND app_lib_dependency ${link_lib})
 	endforeach()
 	
 	target_link_libraries(${app_name}

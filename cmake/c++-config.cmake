@@ -18,14 +18,13 @@ add_compile_options(
         -Wsign-promo
         -Wuninitialized
         -Wunreachable-code
-        -Wbool-conversion
 )
 
 # clang recomendations
 if (${CMAKE_CXX_COMPILER} MATCHES ".*clang.*")
         add_compile_options(
             -Wbool-conversion
-            -Wcomma
+        #     -Wcomma
             -Wdeprecated-implementations
             -Wduplicate-method-match
             -Wempty-body
@@ -37,8 +36,8 @@ if (${CMAKE_CXX_COMPILER} MATCHES ".*clang.*")
             -Wnon-literal-null-conversion
             -Wrange-loop-analysis
             -Wstrict-prototypes
-            -Wundef
+        #     -Wundef
             -Wunreachable-code
-            -Wweak-vtables
+        #     -Wweak-vtables
         )
 endif()

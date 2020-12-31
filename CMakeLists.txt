@@ -17,9 +17,9 @@ option(ENABLE_BOOST_TEST "Use Boost Unit Test Framework for testing" OFF)
 
 # ================ Project ========================
 # Project name and a few useful settings
-project(struct
+project(matrix
 	VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER}
-	DESCRIPTION "OTUS c++ homeworks: ip_filter"
+	DESCRIPTION "OTUS c++ homeworks: matrix"
 	LANGUAGES CXX
 )
 
