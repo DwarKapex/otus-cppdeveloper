@@ -24,7 +24,7 @@ add_compile_options(
 if (${CMAKE_CXX_COMPILER} MATCHES ".*clang.*")
         add_compile_options(
             -Wbool-conversion
-            -Wcomma
+        #     -Wcomma
             -Wdeprecated-implementations
             -Wduplicate-method-match
             -Wempty-body
