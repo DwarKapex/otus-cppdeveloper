@@ -25,9 +25,5 @@ deploy:
     user: $BINTRAY_USER
     key: $BINTRAY_API_KEY
     on:
-      all_branches: true
-
-after_failure:
-  - cat /home/travis/build/DwarKapex/otus-cppdeveloper/_CPack_Packages/Linux/DEB/PreinstallOutput.log
-                            
+      all_branches: true                            
                             
