@@ -15,6 +15,9 @@ option(ENABLE_TESTING "Build small (unit) tests" ON)
 option(ENABLE_GTEST "Use Google Test Framework for testing" ON)
 option(ENABLE_BOOST_TEST "Use Boost Unit Test Framework for testing" OFF)
 
+# option to generate docs
+option(ENABLE_DOXYGEN "Build documentation" OFF)
+
 # ================ Project ========================
 # Project name and a few useful settings
 project(struct
@@ -50,6 +53,11 @@ if (ENABLE_TESTING)
 	endif()
 
 	enable_testing()
+endif()
+
+# generate docs
+if (ENABLE_DOXYGEN)
+    include(doxygen/doxygen)
 endif()
 
 # The library code is here
