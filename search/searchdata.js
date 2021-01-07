@@ -1,12 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "bgimpt",
-  1: "bi",
-  2: "p",
-  3: "mpt",
-  4: "bgmp",
-  5: "i",
-  6: "b"
+  0: "abcdfgmoprst~",
+  1: "bp",
+  2: "b",
+  3: "bfmrt",
+  4: "abcdfgmopst~",
+  5: "d",
+  6: "o"
 };
 
 var indexSectionNames =
@@ -17,7 +17,7 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "defines"
+  6: "related"
 };
 
 var indexSectionLabels =
@@ -28,6 +28,6 @@ var indexSectionLabels =
   3: "Files",
   4: "Functions",
   5: "Variables",
-  6: "Macros"
+  6: "Friends"
 };
 

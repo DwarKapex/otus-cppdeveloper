@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5ftuple_5fvalue_26',['get_tuple_value',['../struct_print_ip_1_1build__tuple__string.html#a8dd219ac5be14736f3d6387646921df9',1,'PrintIp::build_tuple_string']]]
+  ['bulk_49',['Bulk',['../classbulk_1_1_bulk.html#a33bbfea84a5a2ebdd6146fb1ca954697',1,'bulk::Bulk::Bulk()'],['../classbulk_1_1_bulk.html#afc1585514ea7ac938a49c5dec2a37dad',1,'bulk::Bulk::Bulk(const size_t chunk)']]]
 ];

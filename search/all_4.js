@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['print_5fip_10',['print_ip',['../namespace_print_ip.html#a4c8c119d299065ae9f515315d51a78df',1,'PrintIp']]],
-  ['print_5fip_5fimpl_11',['print_ip_impl',['../namespace_print_ip.html#a1b17aaf96e5c24ce734589fb413e61ec',1,'PrintIp::print_ip_impl(const T &amp;value)'],['../namespace_print_ip.html#a68179d9d3b03e4605e3cbd98639b2737',1,'PrintIp::print_ip_impl(const T &amp;value)'],['../namespace_print_ip.html#a37b472ad052d63455c1b025224bdc5f8',1,'PrintIp::print_ip_impl(const T &amp;value)'],['../namespace_print_ip.html#a00a1b2199082981bbdccdbc53505c649',1,'PrintIp::print_ip_impl(const std::tuple&lt; T, Tail... &gt; &amp;ip)']]],
-  ['printip_12',['PrintIp',['../namespace_print_ip.html',1,'']]],
-  ['printip_2ecpp_13',['PrintIp.cpp',['../_print_ip_8cpp.html',1,'']]],
-  ['printip_2eh_14',['PrintIp.h',['../_print_ip_8h.html',1,'']]]
+  ['format_9',['Format',['../namespacebulk_1_1_format_util.html#a52e2caa93090a29ec9478f6a22eb7d28',1,'bulk::FormatUtil']]],
+  ['formatutil_2ecpp_10',['FormatUtil.cpp',['../_format_util_8cpp.html',1,'']]],
+  ['formatutil_2eh_11',['FormatUtil.h',['../_format_util_8h.html',1,'']]]
 ];
