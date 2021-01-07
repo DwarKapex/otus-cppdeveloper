@@ -18,7 +18,7 @@ before_deploy:
   - sed -i "s/__VERSION__/$TRAVIS_BUILD_NUMBER/g" bintray-spec.json
 
 deploy:
-    - provider: pages
+  - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
     keep-history: true
