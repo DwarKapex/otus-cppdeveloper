@@ -1,5 +1,5 @@
-project=Struct
-binary_name=struct
+project=Bulk
+binary_name=bulk
 cmake . -DENABLE_GTEST=ON -DENABLE_DOXYGEN=ON
 # build lib
 cmake --build . --target lib_$project

@@ -20,9 +20,9 @@ option(ENABLE_DOXYGEN "Build documentation" OFF)
 
 # ================ Project ========================
 # Project name and a few useful settings
-project(struct
+project(bulk
 	VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER}
-	DESCRIPTION "OTUS c++ homeworks: struct"
+	DESCRIPTION "OTUS c++ homeworks: bulk"
 	LANGUAGES CXX
 )
 
