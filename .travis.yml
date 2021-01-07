@@ -11,6 +11,9 @@ addons:
 before_install:
  - sudo apt-get update -qq 
 
+install:
+ - sudo apt-get install doxygen graphviz -y
+
 script:
   - bash scripts/deploy.sh
  
