@@ -12,27 +12,52 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
 # build options
 option(ENABLE_TESTING "Build small (unit) tests" ON)
+option(ENABLE_GTEST "Use Google Test Framework for testing" ON)
+option(ENABLE_BOOST_TEST "Use Boost Unit Test Framework for testing" OFF)
+
+# option to generate docs
+option(ENABLE_DOXYGEN "Build documentation" OFF)
 
 # ================ Project ========================
 # Project name and a few useful settings
-project(ip_filter
+project(struct
 	VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER}
-	DESCRIPTION "OTUS c++ homeworks: ip_filter"
+	DESCRIPTION "OTUS c++ homeworks: struct"
 	LANGUAGES CXX
 )
 
-# boost for unit tests
-include(find-boost)
-if(NOT Boost_FOUND)
-	message(FATAL_ERROR "Sorry, cannot work without Boost")
-	exit()
-endif()
 include(project_target)
 include(helpers)
 include(c++-config)
 
 if (ENABLE_TESTING)
+	if (ENABLE_GTEST AND ENABLE_BOOST_TEST)
+		message(WARNING "Note: you try to use both Google and Boost Unit Test Frameworks")
+	endif()
+
+	# boost for unit tests
+	if (ENABLE_BOOST_TEST)
+		include(find-boost)
+		if(NOT Boost_FOUND)
+			message(FATAL_ERROR "Boost Unittest Framework was requested, but not found")
+			exit()
+		endif()
+	endif()
+	# gtest for unit tests
+	if (ENABLE_GTEST)
+		include(find-gtest)
+		if(NOT GTEST_FOUND)
+			message(FATAL_ERROR "Google Unittest Framework was requested, but not found")
+			exit()
+		endif()
+	endif()
+
 	enable_testing()
+endif()
+
+# generate docs
+if (ENABLE_DOXYGEN)
+    include(doxygen/doxygen)
 endif()
 
 # The library code is here

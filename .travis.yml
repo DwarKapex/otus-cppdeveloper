@@ -1,7 +1,6 @@
-os: linux
-dist: xenial
-sudo: required
 language: cpp
+dist: focal
+sudo: required
 compiler: clang
 
 addons:
@@ -12,6 +11,9 @@ addons:
 before_install:
  - sudo apt-get update -qq 
 
+install:
+ - sudo apt-get install doxygen graphviz -y
+
 script:
   - bash scripts/deploy.sh
  
@@ -19,6 +21,13 @@ before_deploy:
   - sed -i "s/__VERSION__/$TRAVIS_BUILD_NUMBER/g" bintray-spec.json
 
 deploy:
+    - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    keep-history: true
+    local-dir: docs/html
+    on:
+      all_branches: true
   - provider: script
     skip_cleanup: true
     provider: bintray
@@ -26,5 +35,5 @@ deploy:
     user: $BINTRAY_USER
     key: $BINTRAY_API_KEY
     on:
-      all_branches: true
+      all_branches: true                            
                             
