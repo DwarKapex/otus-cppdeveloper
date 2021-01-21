@@ -1,7 +1,7 @@
 /**
  * \brief Main application
  */
-#include <Struct/Struct.h>
+#include <Editor/Editor.h>
 
 int main() {
     return 0;

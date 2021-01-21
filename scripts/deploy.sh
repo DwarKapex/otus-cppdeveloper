@@ -1,5 +1,5 @@
-project=Struct
-binary_name=struct
+project=Editor
+binary_name=editor
 cmake . -DENABLE_GTEST=ON -DENABLE_DOXYGEN=ON
 # build lib
 cmake --build . --target lib_$project

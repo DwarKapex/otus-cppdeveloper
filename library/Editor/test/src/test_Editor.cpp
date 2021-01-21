@@ -1,8 +1,8 @@
-#include <Struct/Struct.h>
+#include <Editor/Editor.h>
 
 #include <gtest/gtest.h>
 
-TEST(Struct, DummyTest)
+TEST(Editor, DummyTest)
 {
    ASSERT_TRUE(true);
 }
