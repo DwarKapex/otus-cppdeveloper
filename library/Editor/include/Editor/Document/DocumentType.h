@@ -1,10 +1,15 @@
 #pragma once
 
+namespace document {
+
 /**
  * @brief Supported type of documents for Graphic Editor
  * 
  */
+
 enum class DocumentType {
-    PGN,
-    JPG
+    PNG = 0,
+    JPG = 1
 };
+
+} // namespace document
