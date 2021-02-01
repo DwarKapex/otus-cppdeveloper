@@ -1,10 +1,10 @@
-#include <Editor/Editor.h>
+#include <Editor/GraphicEditor.h>
 
 #include <gtest/gtest.h>
 
-TEST(Editor, DummyTest)
+TEST(Editor, Ctor)
 {
-   ASSERT_TRUE(true);
+   GraphicEditor editor;
 }
 
 int main(int argc, char** argv) {
