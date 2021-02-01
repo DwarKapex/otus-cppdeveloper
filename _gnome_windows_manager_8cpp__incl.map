@@ -1,0 +1,10 @@
+<map id="library/Editor/src/WindowManager/GnomeWindowsManager.cpp" name="library/Editor/src/WindowManager/GnomeWindowsManager.cpp">
+<area shape="rect" id="node1" title="Implementation for GNU Linux (Gnome)" alt="" coords="254,5,499,61"/>
+<area shape="rect" id="node2" href="$_gnome_windows_manager_8h.html" title=" " alt="" coords="195,109,395,151"/>
+<area shape="rect" id="node8" title=" " alt="" coords="419,117,499,143"/>
+<area shape="rect" id="node3" href="$_i_windows_manager_8h.html" title="Interface for Window Managers. Of caurse, it&#39;s better to move it to a seperate library,..." alt="" coords="141,199,321,240"/>
+<area shape="rect" id="node7" title=" " alt="" coords="313,295,390,322"/>
+<area shape="rect" id="node4" href="$_window_config_8h.html" title="Configuration for a newly created Window." alt="" coords="5,288,185,329"/>
+<area shape="rect" id="node6" title=" " alt="" coords="209,295,272,322"/>
+<area shape="rect" id="node5" title=" " alt="" coords="58,377,133,404"/>
+</map>

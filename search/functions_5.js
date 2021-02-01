@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gettimestamp_53',['GetTimestamp',['../classbulk_1_1_bulk.html#a959cb07924d8fcae13e51d52e930440e',1,'bulk::Bulk']]]
+  ['jpg_146',['JPG',['../classdocument_1_1_j_p_g.html#ac7c041f3ae8d26e385d961c6758e7789',1,'document::JPG']]]
 ];

@@ -1,8 +1,16 @@
 var searchData=
 [
-  ['print_16',['Print',['../classbulk_1_1_print_report.html#a218d83d2890f591f1dc1c870fa32fe91',1,'bulk::PrintReport::Print()'],['../classbulk_1_1_print_report_default.html#abcf9aab1ca74d3bd759f1d181e108b23',1,'bulk::PrintReportDefault::Print()'],['../classbulk_1_1_print_report_to_file.html#a7cb79272e6833758cf9fc5546f737396',1,'bulk::PrintReportToFile::Print()']]],
-  ['printreport_17',['PrintReport',['../classbulk_1_1_print_report.html',1,'bulk::PrintReport'],['../classbulk_1_1_print_report.html#a1a7be245a752ee20870d82e16620ff37',1,'bulk::PrintReport::PrintReport()=default'],['../classbulk_1_1_print_report.html#a335d35e9319f72f8755725d394d02cb9',1,'bulk::PrintReport::PrintReport(const std::string &amp;delimiter)']]],
-  ['printreportdefault_18',['PrintReportDefault',['../classbulk_1_1_print_report_default.html',1,'bulk::PrintReportDefault'],['../classbulk_1_1_print_report_default.html#a1b040a22eb083a9e353ddc6dec2bb089',1,'bulk::PrintReportDefault::PrintReportDefault()=default'],['../classbulk_1_1_print_report_default.html#a7ceae1c6a95463597520694db7ad9b30',1,'bulk::PrintReportDefault::PrintReportDefault(std::shared_ptr&lt; Bulk &gt; bulk, std::ostream &amp;source=std::cout)']]],
-  ['printreporttofile_19',['PrintReportToFile',['../classbulk_1_1_print_report_to_file.html',1,'bulk::PrintReportToFile'],['../classbulk_1_1_print_report_to_file.html#a4caeab9b3df2f13ee5a9548c3ca0e4f7',1,'bulk::PrintReportToFile::PrintReportToFile()=default'],['../classbulk_1_1_print_report_to_file.html#a9a311a6424207a2d16c437179e48e62f',1,'bulk::PrintReportToFile::PrintReportToFile(std::shared_ptr&lt; Bulk &gt; bulk)']]],
-  ['process_20',['Process',['../classbulk_1_1_bulk.html#abd83193535557b7e3a3ee3c20bffa7eb',1,'bulk::Bulk']]]
+  ['idocument_28',['IDocument',['../classdocument_1_1_i_document.html',1,'document::IDocument'],['../classdocument_1_1_i_document.html#a2a694f1f5e6cad36651482c88f48717d',1,'document::IDocument::IDocument()']]],
+  ['idocument_2eh_29',['IDocument.h',['../_i_document_8h.html',1,'']]],
+  ['ieditor_30',['IEditor',['../class_i_editor.html',1,'IEditor&lt; PrimitiveType, PrimitiveConfig &gt;'],['../class_i_editor.html#a071d4338d8edcdaf139453fe81718532',1,'IEditor::IEditor()']]],
+  ['ieditor_2eh_31',['IEditor.h',['../_i_editor_8h.html',1,'']]],
+  ['ieditor_3c_20document_3a_3aiprimitive_2c_20document_3a_3aprimitiveconfig_20_3e_32',['IEditor&lt; document::IPrimitive, document::PrimitiveConfig &gt;',['../class_i_editor.html',1,'']]],
+  ['importdocument_33',['ImportDocument',['../class_graphic_editor.html#a3dd1fcb95f59ce7b640891d8680cf485',1,'GraphicEditor::ImportDocument()'],['../class_i_editor.html#af971b613e713651fbbb296e2dedd9b45',1,'IEditor::ImportDocument()']]],
+  ['iprimitive_34',['IPrimitive',['../classdocument_1_1_i_primitive.html',1,'document::IPrimitive'],['../classdocument_1_1_i_primitive.html#aeb7c5776421f13aa1248e15cbc8bfb45',1,'document::IPrimitive::IPrimitive()']]],
+  ['iprimitive_2eh_35',['IPrimitive.h',['../_i_primitive_8h.html',1,'']]],
+  ['itool_36',['ITool',['../classdocument_1_1_i_tool.html',1,'document']]],
+  ['itool_2eh_37',['ITool.h',['../_i_tool_8h.html',1,'']]],
+  ['iwindow_38',['IWindow',['../classwindows__manager_1_1_i_window.html',1,'windows_manager::IWindow'],['../classwindows__manager_1_1_i_window.html#afd66f151b0cc1c4a03a31fd9fefafcfb',1,'windows_manager::IWindow::IWindow()']]],
+  ['iwindowsmanager_39',['IWindowsManager',['../classwindows__manager_1_1_i_windows_manager.html',1,'windows_manager::IWindowsManager'],['../classwindows__manager_1_1_i_windows_manager.html#a8a140417c40e25851ac1ca654567c0a9',1,'windows_manager::IWindowsManager::IWindowsManager()=default'],['../classwindows__manager_1_1_i_windows_manager.html#aa81b28450beb20d840a6ef11fc94b8ed',1,'windows_manager::IWindowsManager::IWindowsManager(const IWindowsManager &amp;)=delete'],['../classwindows__manager_1_1_i_windows_manager.html#a7a38b159d28ebc1ba13639474ef37c94',1,'windows_manager::IWindowsManager::IWindowsManager(IWindowsManager &amp;&amp;)=default']]],
+  ['iwindowsmanager_2eh_40',['IWindowsManager.h',['../_i_windows_manager_8h.html',1,'']]]
 ];

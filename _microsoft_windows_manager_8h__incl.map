@@ -1,0 +1,8 @@
+<map id="library/Editor/include/Editor/WindowsManager/MicrosoftWindowsManager.h" name="library/Editor/include/Editor/WindowsManager/MicrosoftWindowsManager.h">
+<area shape="rect" id="node1" title=" " alt="" coords="134,5,347,61"/>
+<area shape="rect" id="node2" href="$_i_windows_manager_8h.html" title="Interface for Window Managers. Of caurse, it&#39;s better to move it to a seperate library,..." alt="" coords="151,109,331,151"/>
+<area shape="rect" id="node3" href="$_window_config_8h.html" title="Configuration for a newly created Window." alt="" coords="5,199,185,240"/>
+<area shape="rect" id="node5" title=" " alt="" coords="209,206,272,233"/>
+<area shape="rect" id="node6" title=" " alt="" coords="297,206,374,233"/>
+<area shape="rect" id="node4" title=" " alt="" coords="58,288,133,315"/>
+</map>

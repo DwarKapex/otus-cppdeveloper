@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['chopinput_6',['ChopInput',['../classbulk_1_1_bulk.html#a882c17b0529f32e5074df891b2f6d368',1,'bulk::Bulk']]]
+  ['blue_3',['Blue',['../namespacedocument.html#ab7ede39b907b7dc0a498ec66b1d0aad2a9594eec95be70e7b1710f730fdda33d9',1,'document']]],
+  ['brush_4',['Brush',['../classdocument_1_1_brush.html',1,'document']]]
 ];

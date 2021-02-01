@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stripstring_61',['StripString',['../namespacebulk_1_1_format_util.html#a276d14248d304168e723d5137f80158e',1,'bulk::FormatUtil']]]
+  ['png_152',['PNG',['../classdocument_1_1_p_n_g.html#ab8c10c80f42fc1034c0d55e902245e0a',1,'document::PNG']]]
 ];

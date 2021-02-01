@@ -1,5 +1,0 @@
-<map id="bulk::PrintReport" name="bulk::PrintReport">
-<area shape="rect" id="node1" title="Interface for reporters." alt="" coords="128,5,259,32"/>
-<area shape="rect" id="node2" href="$classbulk_1_1_print_report_default.html" title="Report to std::cout." alt="" coords="5,80,184,107"/>
-<area shape="rect" id="node3" href="$classbulk_1_1_print_report_to_file.html" title="Report to file." alt="" coords="208,80,376,107"/>
-</map>
